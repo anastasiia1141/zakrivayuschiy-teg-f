@@ -54,6 +54,7 @@
 }
 
 .subtitle {
+  line-height: 23px;
   padding-bottom: 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
@@ -131,8 +132,8 @@
 }
 
 img {
-  width: clamp(375px, 50vw, 696px);
-  height: clamp(375px, 50vw, 696px);
+  width: clamp(371px, 50vw, 696px);
+  height: clamp(371px, 50vw, 696px);
   display: block;
   inline-size: 100%;
   object-fit: cover;
@@ -317,6 +318,7 @@ dialog::backdrop {
   mix-blend-mode: difference;
   justify-content: center;
   cursor: pointer;
+  line-height: 12px;
 }
 
 .button__footer {
@@ -374,9 +376,13 @@ dialog::backdrop {
 }
 
 @media (width <=375px) {
-  .img {
-    width: clamp(375px, 50vw, 696px);
-    height: clamp(375px, 50vw, 696px);
+  .save {
+    height: 28px;
+    width: 28px;
+  }
+
+  .subtitle {
+    line-height: 14px;
   }
 
   .card__text {
@@ -385,6 +391,7 @@ dialog::backdrop {
 
   .button__footer {
     flex-direction: column;
+    margin-bottom: 100px;
   }
 }
 
