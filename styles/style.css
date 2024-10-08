@@ -388,7 +388,7 @@ dialog::backdrop {
   }
 }
 
-.filter-mix- {
+.filter-mix {
   filter: grayscale(50%) brightness(120%) contrast(90%);
 }
 
