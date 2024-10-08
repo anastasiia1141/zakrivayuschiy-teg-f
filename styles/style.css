@@ -13,6 +13,12 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 .page {
   background-color: var(--bg-color);
@@ -20,6 +26,7 @@
   background-image: var(--bg-img);
   background-size: cover;
   margin-top: 100px;
+  font-variation-settings: 'wght'var(--font-weight);
 }
 
 .header {
@@ -30,7 +37,6 @@
 }
 
 .header__card {
-
   max-inline-size: 696px;
   background: var(--bg-header-card);
   margin-left: auto;
@@ -44,18 +50,18 @@
   text-transform: uppercase;
   font-size: clamp(49px, 8vw, 65px);
   padding-bottom: 20px;
-  line-height: clamp(49px, 10vw, 69px);
   margin-block-start: clamp(120px, 10vw, 136px);
 }
 
 .subtitle {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
 
 .theme-menu__list {
-  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-bottom: 25px;
   line-height: 14px;
   font-size: 14px;
   gap: 14px;
@@ -126,7 +132,6 @@
 
 img {
   width: clamp(375px, 50vw, 696px);
-  /* Минимум 375px, предпочтительно 50% ширины вьюпорта, максимум 700px */
   height: clamp(375px, 50vw, 696px);
   display: block;
   inline-size: 100%;
@@ -176,7 +181,7 @@ img {
   font-size: 14px;
   font-family: var(--font-family-Press);
   min-block-size: 38px;
-  min-inline-size: 135px;
+  min-inline-size: 130px;
 }
 
 .card__like-button:focus {
@@ -222,7 +227,7 @@ img {
 }
 
 .card__title {
-  font-weight: var(--font-weight-title-card);
+  font-variation-settings: 'wght'var(--font-weight-title-card);
   padding: 4px 10px;
   font-family: var(--font-family-Inter);
   line-height: 21px;
@@ -247,15 +252,26 @@ img {
   font-family: var(--font-family-Press);
 }
 
-@supports not (mix-blend-mode: hard-light) {
-  .decor {
-    text-shadow: 0 0 2px var(--text-shadow-color);
-    color: var(--accent-color);
-  }
+.decor {
+  z-index: 1;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  padding-top: 25px;
+  inset-inline-end: 13px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--accent-color);
+  position: absolute;
+  font-family: var(--font-family-Press);
+  text-shadow: 0 0 1px var(--text-shadow-color);
 }
 
-dialog::backdrop {
-  backdrop-filter: blur(7px);
+@supports ((-webkit-text-stroke: 1px var(--text-shadow-color)) or (text-stroke: 1px var(--text-shadow-color))) {
+  .card__img-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-shadow-color);
+    text-stroke: 1px var(--text-shadow-color);
+  }
 }
 
 .button__section {
@@ -281,7 +297,7 @@ dialog::backdrop {
   line-height: 21px;
 }
 
-dialog {
+dialog[open] {
   background-color: var(--bg-color);
   color: var(--accent-color);
   position: fixed;
@@ -299,6 +315,10 @@ dialog:not([open]) {
   pointer-events: none;
 }
 
+dialog::backdrop {
+  backdrop-filter: blur(7px);
+}
+
 .save {
   height: 21px;
   width: 21px;
@@ -313,6 +333,7 @@ dialog:not([open]) {
 }
 
 .button__footer {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,4 +396,36 @@ dialog:not([open]) {
   .card__text {
     border-top: 4px solid var(--accent-color);
   }
+
+  .button__footer {
+    flex-direction: column;
+  }
+}
+
+.filter-mix {
+  filter: grayscale(50%) brightness(120%) contrast(90%);
+}
+
+.filter-invert {
+  filter: invert(40%);
+}
+
+.filter-blur {
+  filter: blur(2px);
+}
+
+.filter-saturate {
+  filter: saturate(200%);
+}
+
+.filter-opacity {
+  filter: opacity(70%);
+}
+
+.filter-sepia {
+  filter: sepia(70%);
+}
+
+.filter-grayscale {
+  filter: grayscale(100%);
 }
