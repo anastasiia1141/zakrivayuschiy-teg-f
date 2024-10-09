@@ -17,7 +17,6 @@
     display: inline-block;
     position: relative;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
 }
 
 .core {
@@ -45,8 +44,8 @@
 }
 
 .like-icon:hover .main-body {
-    fill: var(--heart-contour-color, #000);
 
+    fill: var(--heart-contour-color, #000);
 }
 
 .like-icon:not(:hover) .main-body {
@@ -106,5 +105,15 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes option {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(4px);
     }
 }

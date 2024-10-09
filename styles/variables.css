@@ -2,8 +2,8 @@
 
 
 :root {
-    --font-family-Inter: 'Inter-Variable', sans-serif;
-    --font-family-Press: 'PressStart2P', sans-serif;
+    --font-family-details: 'Inter-Variable', sans-serif;
+    --font-family-content: 'PressStart2P', fantasy;
     --font-weight: 400;
     --font-weight-title-card: 700;
     --bg-color: #fff;
