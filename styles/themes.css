@@ -64,7 +64,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --font-weight-title-card: 765;
+        --font-weight-title-card: 785;
         --font-weight: 400;
         --heart-sparks-color: #FF0000;
         --heart-contour-color: #00c140;
