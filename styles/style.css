@@ -141,7 +141,6 @@ img {
 }
 
 .card__icon-button {
-  padding-right: 4px;
   background-color: var(--bg-color);
   display: flex;
   border: 2px solid transparent;
@@ -155,6 +154,7 @@ img {
 }
 
 .card__icon-button:focus-visible {
+  padding-right: 2px;
   border-color: 2px solid var(--accent-color);
 }
 
@@ -253,6 +253,7 @@ img {
 }
 
 .button__section {
+  gap: 5px;
   display: flex;
   justify-content: flex-end;
   padding: 0 25px 25px 25px;
