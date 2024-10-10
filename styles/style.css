@@ -19,6 +19,7 @@
 }
 
 .page {
+  background-attachment: fixed;
   background-color: var(--bg-color);
   color: var(--accent-color);
   background-image: var(--bg-img);
@@ -146,6 +147,7 @@ img {
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
   height: 38px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -154,7 +156,6 @@ img {
 }
 
 .card__icon-button:focus-visible {
-  padding-right: 2px;
   border-color: 2px solid var(--accent-color);
 }
 
@@ -285,7 +286,6 @@ dialog[open] {
   display: grid;
   gap: 30px;
   transition: opacity 0.3s ease-in-out;
-  min-block-size: 193px;
   max-inline-size: 357px;
   padding: 30px;
 }
