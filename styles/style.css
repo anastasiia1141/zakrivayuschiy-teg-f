@@ -296,7 +296,7 @@ dialog:not([open]) {
 }
 
 dialog::backdrop {
-  backdrop-filter: #000;
+  color: #000;
   opacity: 0.75;
 }
 
